@@ -3,10 +3,10 @@
 function User(parentElement, user, repos) {
   this.parentElement = parentElement;
   this.elements = null;
+  this.userDataContainer = null;
+  this.reposListContainer = null;
   this.user = user;
   this.repos = repos;
-  this.userData = null;
-  this.reposList = null;
 }
 
 User.prototype.generate = function(){
@@ -16,13 +16,14 @@ User.prototype.generate = function(){
         <div>
             <img src="./public/images/gitHubLogo.png">
         </div>
-        <div id="userData">
-            <p class="username">@${this.user.login}</p>
+        <div id="userDataContainer">
+            <p class="username">@${this.user.login? this.user.login : 'No username available'}</p>
             <h2>${this.user.name? this.user.name : 'No name available'}</h2>
             <p>${this.user.bio? this.user.bio : 'No bio available'}</p>
         </div>
     </header>
-    <main id="reposList">
+    <main id="reposListContainer">
+        <h3>Repositories</h3>
     </main>
   </article>
   `
@@ -35,6 +36,6 @@ User.prototype.render = function(){
 }
 
 User.prototype.getContainers = function(){
-    this.userData = document.getElementById('userData');
-    this.reposList = document.getElementById('reposList');
+    this.userDataContainer = document.getElementById('userDataContainer');
+    this.reposListContainer = document.getElementById('reposListContainer');
   }
