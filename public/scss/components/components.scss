@@ -1,37 +1,85 @@
 
 @import '../helpers/mixins.scss';
+@import '../helpers/variables.scss';
 
 .home-container{
     background-color: white;
-    margin: 20%;
+    margin: 15% 20%;
     padding: 5%;
     border-radius: 15px;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.15);
     form{
         @include flex-center(row);
         input[type="text"]{
-            padding: 10px;
+            padding: 15px;
+            font-size: 15px;
             border-radius: 10px;
-            border: 1px solid #c5c5c5;
-            margin: 0 5px;
+            border: 1px solid $lightGrey;
+            margin: 0 8px 0 0;
         }
         input[type="text"]{
             width:100%;
         }
         button[type="submit"]{
             width:30%;
-            padding: 10px;
+            padding: 15px;
+            font-size: 15px;
             border-radius: 10px;
-            background-color: rgb(167, 224, 224);
-            border: 1px solid rgb(167, 224, 224);
+            background-color: $ligthGreen;
+            border: 1px solid $ligthGreen;
         }
     }
 }
 
-.error {
+.error{
     background-color: #ffe7e7;
     color: #b34f4f;
     padding: 5%;
     border: 1px #a5606045 solid;
     border-radius: 10px;
+}
+
+.user-card{
+    margin-top:20px;
+    header{
+        @include flex-center(row);
+        justify-content: flex-start;
+        .username{
+            font-style: italic;
+        }
+        div:first-child{
+            width:100px;
+            img{
+                width:100%;
+            }
+        }
+        div:nth-child(2){
+            margin-left: 8px;
+            line-height: 0.4;
+            width: 100%;
+            p:last-child{
+                line-height:1.1;
+            }
+        }
+    }
+}
+
+#reposListContainer{
+    hr{
+        border: 1px solid #504f4f;
+    }
+}
+
+.repo-card{
+    @include flex-center(row);
+    justify-content: space-between;
+    border-bottom: 1px solid $lightGrey;
+    margin: 0px 2%;
+    div {
+        @include flex-center(row);
+        img{
+            height: 20px;
+            margin: 0 5px;
+        }
+    }
 }

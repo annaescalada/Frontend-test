@@ -1,80 +1,93 @@
 # Frontend Test
 
 ## Description
-Trivial Hack is inspired in the famous Trivial Game but this time with true or false computer science questions.
-## MVP (DOM - CANVAS)
-
-The player can generate random questions and has to guess if they are true or false.
-
-
-## Backlog
-
-- The player can change the difficulty of the question.
+Client-side application connected to Github API that allow user to search for a username and get details such as name, bio and repositories list.
 
 ## Data structure
 
 Components:
 
-  Navbar
-  this.parentElement
-    this.links
-    this.style
+  User
+    this.parentElement
+    this.elements
+    this.userDataContainer
+    this.reposListContainer
+    this.user
+    this.repos
+    this.generate()
     this.render()
+    this.getContainers()
+
+
+  RepoCard
+    this.repo
+    this.elements
     this.generate()
     
-  Footer
-  this.parentElement
-    this.style
-    this.render()
-    this.generate()
-
-  Cards
-    this.cardStyle
-  this.movie
-  this.generate()
-
   Loading
     this.parentElement
-    this.style
-    this.render()
+    this.elements
     this.generate()
+    this.render()
+
+  SearchBar
+    this.parentElement
+    this.elements
+    this.placeHolder
+    this.handleClick
+    this.generate()
+    this.render()
+    this.handleSearchSubmit()
+
+  Error
+    this.parentElement
+    this.elements
+    this.errorMessage
+    this.generate()
+    this.render()
 
 Pages:
 
-  LandingPage
+  Home
     this.parentElement
-    this.title
-    this.subtitle
-    this.style
-    this.render()
+    this.searchContainer
+    this.resultsContainer
+    this.elements
+    this.loading
+    this.error
+    this.userFromApi
+    this.userRepos
+    this.user
     this.generate()
-
-  TrivialPage
-    this.parentElement
-    this.title
-    this.movies
-    this.style
     this.render()
-    this.generate()
-    this.getMovies()
-    this.callSWService()
+    this.getContainers()
+    this.fetchUser()
+    this.generateError()
+    this.getUserFromApi()
+    this.getRepos()
+    this.renderUser()
 
 Services:
 
-  Service
+  GitHubService
     this.baseUrl
-    this.getAllMovies()
+    this.getUser()
+    this.getRepos()
 
 Layout
 	this.root
-	this.style
+  this.elements
+  this.header
+  this.main
+  this.footer
 	this.render()
 	this.generate()
 	this.getContainers()
 
 Router
-	this.url
-	this.generatePage()
+	this.page
+	this.buildDOM()
+  this.generateHome()
 
 App
 
@@ -82,8 +95,7 @@ App
 ## States y States Transitions
 Definition of the different states and their transition:
 
-- Landing Page: consists on the first screen of the website and has a button to start the game.
-- Trivial Page: consists on the difficulty selector and the button to generate questions.
+- Home Page: consists on a search bar and a button to generate username details.
 
 ## Task
 
@@ -101,23 +113,11 @@ Create app.
 
 Apply styles.
 
-Backlog:
-  Change difficulty of the question.
-
 
 ## Links
-
-
-### Trello
-[Link url](https://trello.com)
 
 
 ### Git
 URls for the project repo and deploy
 [Link Repo](https://github.com/annaescalada/trivial-web)
 [Link Deploy](https://annaescalada.github.io/trivial-web/#0)
-
-
-### Slides
-URls for the project presentation (slides)
-[Link Slides.com](https://docs.google.com/presentation/d/1TJ2onuva3uXLwXxRwbx3L3rYtGlsHyOlUwNxSZepGqg/edit?usp=sharing)
