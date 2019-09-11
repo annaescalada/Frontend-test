@@ -1,7 +1,7 @@
 'use strict';
 
 class User {
-  constructor(parentElement, placeHolder, handleClick) {
+  constructor(parentElement, user, repos) {
     this.parentElement = parentElement;
     this.elements = null;
     this.userDataContainer = null;
@@ -11,7 +11,6 @@ class User {
   }
 
   generate() {
-    console.log(this.repos);
     this.elements = `
     <article class="user-card">
       <header>
