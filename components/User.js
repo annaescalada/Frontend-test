@@ -15,7 +15,7 @@ class User {
     <article class="user-card">
       <header>
           <div>
-              <img src="./public/images/gitHubLogo.png">
+              <img src="./public/images/gitHubLogo.png" alt="Github logo">
           </div>
           <div id="userDataContainer">
               <p class="username">@${this.user.login ? this.user.login : 'No username available'}</p>

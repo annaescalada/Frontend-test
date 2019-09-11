@@ -11,9 +11,9 @@ class RepoCard {
         <div class="repo-card">
             <h3>${this.repo.name}</h3>
             <div>
-              <img src="./public/images/star.png">
+              <img src="./public/images/star.png" alt="icon for watchers">
               <p>${this.repo.watchers}</p>
-              <img src="./public/images/fork.png">
+              <img src="./public/images/fork.png" alt="icon for forks">
               <p>${this.repo.forks_count}</p>
             </div>
         </div>

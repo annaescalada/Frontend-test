@@ -7,7 +7,7 @@ class SearchBar {
     this.placeHolder = placeHolder;
     this.handleClick = handleClick;
   }
-  
+
   generate() {
     this.elements = `
         <form id="searchForm">
@@ -18,7 +18,7 @@ class SearchBar {
     this.render();
     this.handleSearchSubmit();
   }
-  
+
   handleSearchSubmit() {
     const searchForm = document.getElementById('searchForm');
     self = this;
@@ -28,7 +28,7 @@ class SearchBar {
       this.handleClick(value);
     })
   }
-  
+
   render() {
     this.parentElement.innerHTML = this.elements;
   }
