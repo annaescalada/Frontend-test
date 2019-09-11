@@ -119,5 +119,5 @@ Apply styles.
 
 ### Git
 URls for the project repo and deploy
-[Link Repo](https://github.com/annaescalada/trivial-web)
-[Link Deploy](https://annaescalada.github.io/trivial-web/#0)
+[Link Repo](https://github.com/annaescalada/Frontend-test)
+[Link Deploy](https://annaescalada.github.io/Frontend-test/)
